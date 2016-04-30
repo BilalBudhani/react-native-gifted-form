@@ -128,15 +128,14 @@ module.exports = React.createClass({
               });
             }}
           >
-            <Image
+            <Text
               style={{
-                width: 21,
-                marginRight: 10,
-                tintColor: '#fff',                
-              }}
-              resizeMode={Image.resizeMode.contain}
-              source={require('../icons/check.png')}
-            />
+                width: 50,
+                color: '#fff',
+                fontSize: 18,
+                marginTop: 10}}>
+              Done
+            </Text>
           </TouchableOpacity>
         );
       },
