@@ -132,9 +132,8 @@ module.exports = React.createClass({
               style={{
                 width: 50,
                 color: '#fff',
-                fontSize: 16,
-                marginRight: 5,
-                marginTop: 13}}>
+                fontSize: 18,
+                marginTop: 10}}>
               Done
             </Text>
           </TouchableOpacity>
