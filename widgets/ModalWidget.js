@@ -206,13 +206,7 @@ module.exports = React.createClass({
             if (typeof this.props.transformValue === 'function') {
               return this.props.transformValue(GiftedFormManager.stores[this.props.formName].values[this.props.displayValue]);
             } else if (GiftedFormManager.stores[this.props.formName].values[this.props.displayValue] instanceof Date) {
-              return moment(GiftedFormManager.stores[this.props.formName].values[this.props.displayValue]).calendar(null, {
-                sameDay: '[Today]',
-                nextDay: '[Tomorrow]',
-                nextWeek: 'dddd',
-                lastDay: '[Yesterday]',
-                lastWeek: '[Last] dddd'
-              });
+              return moment(GiftedFormManager.stores[this.props.formName].values[this.props.displayValue]).format('M/D/YYYY h:mm A');
             }
             if (typeof GiftedFormManager.stores[this.props.formName].values[this.props.displayValue] === 'string') {
               return GiftedFormManager.stores[this.props.formName].values[this.props.displayValue].trim();
@@ -234,13 +228,7 @@ module.exports = React.createClass({
                     // should return the title and not the value in case of select menu
                     return values[this.props.displayValue].join(', ');
                   } else if (values[this.props.displayValue] instanceof Date) {
-                    return moment(values[this.props.displayValue]).calendar(null, {
-                      sameDay: '[Today]',
-                      nextDay: '[Tomorrow]',
-                      nextWeek: 'dddd',
-                      lastDay: '[Yesterday]',
-                      lastWeek: '[Last] dddd'
-                    });
+                    return moment(values[this.props.displayValue]).format('M/D/YYYY h:mm A');
                   } else {
                     return values[this.props.displayValue];
                   }
